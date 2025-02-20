@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"
+        integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8e500;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen">
+    <!-- iPhone Frame -->
+    <div class="w-[350px] h-[730px]  rounded-[40px] border-[10px] border-gray-900 shadow-2xl relative overflow-hidden">
+        <!-- Front Camera & Speaker Notch -->
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/2 h-8 bg-gray-900 rounded-b-[20px] z-10">
+        </div>
+
+        <!-- Album Cover -->
+        <div class="w-full h-[350px] relative">
+            <img src="https://placehold.co/400x350" alt="Album Cover" class="w-full h-full object-cover">
+            <!-- Status Bar -->
+            <div class="absolute top-4 left-4 text-white text-xs font-semibold">9:41</div>
+            <div class="absolute top-4 right-4 flex space-x-2 text-white text-xs">
+                <i class="fas fa-signal"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+
+        </div>
+
+        <!-- Music Player Controls -->
+        <div class="bg-[#f8e500] w-full h-[380px] flex flex-col justify-between items-center pt-12 pb-6 px-2">
+            <div class="flex flex-col justify-center items-center">
+                <h2 class="text-black font-semibold text-lg">The Velvet Hour</h2>
+                <p class="text-gray-700 text-sm mt-1">Ava Brooks</p>
+                <!-- Indicator Dots -->
+                <div class="flex gap-2 mt-3">
+                    <span class="w-2 h-2 bg-gray-900 rounded-full opacity-25"></span>
+                    <span class="w-2 h-2 bg-gray-900 rounded-full opacity-50"></span>
+                    <span class="w-2 h-2 bg-gray-900 rounded-full"></span>
+                    <span class="w-2 h-2 bg-gray-900 rounded-full opacity-50"></span>
+                    <span class="w-2 h-2 bg-gray-900 rounded-full opacity-25"></span>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="flex items-center justify-center gap-8 mt-8 w-full">
+                <!-- Car Icon with Play Overlay -->
+                <div class="relative flex items-center">
+                    <i class="fas fa-car text-black text-xl opacity-50"></i>
+                    <div
+                        class="p-[6px] absolute -bottom-1 -right-1 bg-black text-white w-[8px] h-[8px] flex items-center justify-center rounded-full">
+                        <i class="fas fa-play w-[4px]"></i>
+                    </div>
+                </div>
+
+                <!-- Play/Pause Button -->
+                <button
+                    class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center shadow-lg opacity-75">
+                    <i class="fas fa-pause text-xl"></i>
+                </button>
+
+                <!-- News Globe Icon with Play Overlay -->
+                <div class="relative flex items-center">
+                    <i class="fas fa-globe text-black text-xl opacity-50"></i>
+                    <div
+                        class="p-[6px] absolute -bottom-1 -right-1 bg-black text-white w-[8px] h-[8px]  flex items-center justify-center rounded-full">
+                        <i class="fas fa-play w-[4px]"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col w-full items-center justify-center gap-4">
+                <!-- Live Stream Section -->
+                <div class="w-full bg-[#ead300] rounded-xl flex items-center p-3 space-x-3 ">
+                    <!-- Live Logo Image -->
+                    <img src="https://placehold.co/50x50" alt="Live Logo" class="w-10 h-10 rounded-lg">
+                    <!-- Stream Info -->
+                    <div class="flex flex-col">
+                        <p class="text-black font-semibold text-sm flex items-center">
+                            <i class="fa-solid fa-chart-simple mr-2"></i> Antenne Steiermark
+                        </p>
+                        <p class="text-gray-700 text-xs">Stream wechseln</p>
+                    </div>
+                </div>
+                <!-- Bottom Gesture Bar -->
+                <div class="w-1/3 h-1 bg-black rounded-full"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
